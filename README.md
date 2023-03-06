@@ -14,7 +14,8 @@ A 2023-as ifjúsági csendesnapra elkészített form stripe fizetéssel.
  - [ ] Feltöltés egy domain-re
  - [ ] ...
 
-# Mappák
+# DEVELOPER INFORMÁCIÓK
+## Mappák
 
 
 A feltöltött mappák tartalmai. Az eddig használt technológiák: **Angular**, **Nodejs**
