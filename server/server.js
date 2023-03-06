@@ -21,10 +21,10 @@ app.get("/api", (req, res) => {
 app.get("/api/teszt", (req, res) => {
   res.send("teszt");
 });
-app.get("/api/success.html", (req, res) => {
+app.get("/api/success", (req, res) => {
   res.send("success");
 });
-app.get("/api/cancel.html", (req, res) => {
+app.get("/api/cancel", (req, res) => {
   res.send("cancel");
 });
 app.post("/api/checkout", async (req, res, next) => {
@@ -36,8 +36,8 @@ app.post("/api/checkout", async (req, res, next) => {
         quantity: 2,
       })),
       mode: "payment",
-      success_url: "http://130.61.91.43/api/success.html",
-      cancel_url: "http://130.61.91.43/api/cancel.html",
+      success_url: "http://130.61.91.43/api/success",
+      cancel_url: "http://130.61.91.43/api/cancel",
     });
     res.status(200).json(session);
   } catch (error) {
