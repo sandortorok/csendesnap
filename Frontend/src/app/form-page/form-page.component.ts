@@ -30,7 +30,25 @@ export class FormPageComponent {
   }
   onCheckout() {
     this.http
-      .post('http://130.61.91.43/api/checkout', { items: [21, 31] })
+      .post('http://130.61.91.43/api/checkout', {
+        items: [
+          {
+            name: 'ticket',
+            quantity: 3,
+            item_id: 'price_1MiiMLAMXAbMlIgoIpMGoKmW',
+          },
+          {
+            name: 'blue-shirt',
+            quantity: 2,
+            item_id: 'price_1MiiGrAMXAbMlIgowBMfSown',
+          },
+          {
+            name: 'white-shirt',
+            quantity: 1,
+            item_id: 'price_1MiiHkAMXAbMlIgoskLmKVkI',
+          },
+        ],
+      })
       .subscribe(async (res: any) => {
         let stripe = await loadStripe(
           'pk_test_51MiKQsAMXAbMlIgoVOBNyRMQ4WIUjcRHmolE3PrhC8p5SKzdZNpolfmbBBzOCOLvzTdJivRlMCCh0etCsEG8evhK00L9nfbpiP'

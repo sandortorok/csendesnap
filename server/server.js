@@ -32,8 +32,8 @@ app.post("/api/checkout", async (req, res, next) => {
   try {
     const session = await stripe.checkout.sessions.create({
       line_items: req.body.items.map((item) => ({
-        price: "price_1MiLBFAMXAbMlIgobpcSYy1w",
-        quantity: 2,
+        price: item.item_id,
+        quantity: item.quantity,
       })),
       mode: "payment",
       success_url: "http://130.61.91.43/api/success",
