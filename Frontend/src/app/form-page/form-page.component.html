@@ -32,16 +32,16 @@
       </mat-error>
     </mat-form-field>
     <mat-error class="server-error">{{ serverMessage }}</mat-error>
-    <button mat-raised-button (click)="onCheckout()">Checkout</button>
     <div style="display: flex; align-items: center; justify-content: center">
       <button
         mat-raised-button
         color="accent"
         type="submit"
         style="text-align: center"
+        (click)="onCheckout()"
         [disabled]="form.invalid"
       >
-        Submit
+        Fizetés
       </button>
     </div>
   </form>
