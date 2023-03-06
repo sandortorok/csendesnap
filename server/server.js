@@ -21,6 +21,12 @@ app.get("/api", (req, res) => {
 app.get("/api/teszt", (req, res) => {
   res.send("teszt");
 });
+app.get("/api/success.html", (req, res) => {
+  res.send("success");
+});
+app.get("/api/cancel.html", (req, res) => {
+  res.send("cancel");
+});
 app.post("/api/checkout", async (req, res, next) => {
   console.log("try");
   try {
