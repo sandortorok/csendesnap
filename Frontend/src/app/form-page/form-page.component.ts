@@ -30,7 +30,7 @@ export class FormPageComponent {
   }
   onCheckout() {
     this.http
-      .post('http://130.61.91.43//checkout', { items: [21, 31] })
+      .post('http://130.61.91.43/api/checkout', { items: [21, 31] })
       .subscribe(async (res: any) => {
         let stripe = await loadStripe(
           'pk_test_51MiKQsAMXAbMlIgoVOBNyRMQ4WIUjcRHmolE3PrhC8p5SKzdZNpolfmbBBzOCOLvzTdJivRlMCCh0etCsEG8evhK00L9nfbpiP'
