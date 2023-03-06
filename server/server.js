@@ -15,6 +15,12 @@ const stripe = require("stripe")(
 app.get("/", (req, res) => {
   res.send("hello");
 });
+app.get("/api", (req, res) => {
+  res.send("api");
+});
+app.get("/api/teszt", (req, res) => {
+  res.send("teszt");
+});
 app.post("/api/checkout", async (req, res, next) => {
   console.log("try");
   try {
